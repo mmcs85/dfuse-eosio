@@ -593,6 +593,7 @@ func init() {
 			if err != nil {
 				return nil, fmt.Errorf("unable to create EOS block mapper: %w", err)
 			}
+
 			return indexerApp.New(&indexerApp.Config{
 				HTTPListenAddr:                      viper.GetString("search-indexer-http-listen-addr"),
 				GRPCListenAddr:                      viper.GetString("search-indexer-grpc-listen-addr"),
